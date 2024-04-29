@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 
 int getInt(char *prompt)
@@ -41,4 +42,16 @@ char* getString(char *prompt)
     fgets(buffer, bufferSize, stdin);
     buffer[strlen(buffer) - 1] = '\0';
     return buffer; // you should also free when you use this buffer
+}
+
+// check if the whole string is just numberic
+
+int isOnlyNumbers(char *string)
+{
+    for (int i = 0, len = strlen(string); i < len; i++)
+    {
+        if(!isdigit(string[i]))
+            return 1;
+    }
+    return 0;
 }
