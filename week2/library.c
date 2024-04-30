@@ -6,7 +6,7 @@
 
 char* getString(char *prompt)
 {
-    int bufferSize = 50;
+    int bufferSize = 1000; // we also need to long string from the user;
 
     char *buffer = malloc(bufferSize * sizeof(char));
 
