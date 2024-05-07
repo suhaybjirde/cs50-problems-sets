@@ -20,3 +20,13 @@ char* getString(char *prompt)
     buffer[strlen(buffer) - 1] = '\0';
     return buffer; // you should also free when you use this buffer to avode memory leak
 }
+
+bool isAphabeticOnly(char *string)
+{
+    for(int i = 0; string[i] != '\0'; i++)
+    {
+        if (!isalpha(string[i]))
+            return false;
+    }
+    return true;
+}
