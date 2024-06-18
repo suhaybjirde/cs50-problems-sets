@@ -15,3 +15,11 @@ def get_int(prompt):
                 return number
         except ValueError:
             print("Enter Valid Number!")
+
+def get_credit_car_num(prompt):
+    while True:
+        credit_num = input(prompt)
+        if 13 <= len(credit_num) <= 16 and credit_num.isnumeric():
+            return credit_num
+        else:
+            print("Enter A valid Credit Card Number!")
