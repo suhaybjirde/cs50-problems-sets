@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Quote{% endblock %}
+{% block main %}
+<div class="center">
+    <form action="/quote" method="post">
+        <div class="mb-3">
+          <input type="text" class="form-control" name="symbol" aria-describedby="emailHelp" placeholder="Symbol">
+        </div>
+        <button type="submit" class="btn btn-primary">Quote</button>
+      </form>
+</div>
+{% endblock %}
